@@ -18,11 +18,8 @@ const routes: Routes = [
   { path: 'cash', component: CashComponent },
   { path: 'bank-facilities', component: BankFacilitiesComponent }
 ];
-
- @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: []
+@NgModule({
+  imports: [ RouterModule.forRoot(routes) ],
+  exports: [ RouterModule ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

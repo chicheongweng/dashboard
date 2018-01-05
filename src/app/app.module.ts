@@ -9,6 +9,7 @@ import { LoansComponent } from './loans.component';
 import { CashComponent } from './cash.component';
 import { BankFacilitiesComponent } from './bank-facilities.component';
 import { DashboardComponent } from './dashboard.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { DashboardComponent } from './dashboard.component';
     DashboardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

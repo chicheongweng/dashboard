@@ -8,6 +8,7 @@ import { FuturesComponent } from './futures.component';
 import { LoansComponent } from './loans.component';
 import { CashComponent } from './cash.component';
 import { BankFacilitiesComponent } from './bank-facilities.component';
+import { DashboardComponent } from './dashboard.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { BankFacilitiesComponent } from './bank-facilities.component';
     FuturesComponent,
     LoansComponent,
     CashComponent,
-    BankFacilitiesComponent
+    BankFacilitiesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule

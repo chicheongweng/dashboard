@@ -10,7 +10,13 @@ import { CashComponent } from './cash.component';
 import { BankFacilitiesComponent } from './bank-facilities.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent }
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'securities', component: SecuritiesComponent },
+  { path: 'futures', component: FuturesComponent },
+  { path: 'loans', component: LoansComponent },
+  { path: 'cash', component: CashComponent },
+  { path: 'bank-facilities', component: BankFacilitiesComponent }
 ];
 
  @NgModule({

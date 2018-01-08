@@ -10,7 +10,7 @@ import { CashComponent } from './cash/cash.component';
 import { BankFacilitiesComponent } from './bank-facilities/bank-facilities.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './/app-routing.module';
-
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,7 @@ import { AppRoutingModule } from './/app-routing.module';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

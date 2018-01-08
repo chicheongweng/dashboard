@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService } from '../data.service';
+import { Security } from './security';
 @Component({
   selector: 'app-securities',
   templateUrl: './securities.component.html',

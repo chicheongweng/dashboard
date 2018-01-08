@@ -1,5 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataService } from '../data.service';
+import { Future } from '../futures/future';
+import { Cash } from '../cash/cash';
+import { Loan } from '../loans/loan';
+import { Security } from '../securities/security';
+import { BankFacility } from '../bank-facilities/bank-facility';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

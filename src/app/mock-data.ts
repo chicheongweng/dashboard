@@ -10,6 +10,11 @@ export const FUTURES: Future[] = [
     account_executive: '1234',
     daily_turnover: 100000,
     accumulated_turnover: 8000000
+  },
+  {
+    account_executive: '5678',
+    daily_turnover: 990000,
+    accumulated_turnover: 89730000
   }
 ];
 
@@ -18,6 +23,11 @@ export const SECURITIES: Security[] = [
     account_executive: '1234',
     daily_turnover: 100000,
     accumulated_turnover: 8000000
+  },
+  {
+    account_executive: '5678',
+    daily_turnover: 103900,
+    accumulated_turnover: 89720000
   }
 ];
 

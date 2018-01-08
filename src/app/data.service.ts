@@ -4,29 +4,33 @@ import { Cash } from './cash/cash';
 import { Loan } from './loans/loan';
 import { Security } from './securities/security';
 import { BankFacility } from './bank-facilities/bank-facility';
+import { SECURITIES, FUTURES, LOANS, CASH, BANK_FACILITIES } from './mock-data';
+
+import { Observable } from 'rxjs/Observable';
+import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class DataService {
 
   constructor() { }
 
-  public getSecurity(): Security {
+  public getSecurity(): Observable<Security> {
     return null;
   }
 
-  public getFuture(): Future {
+  public getFuture(): Observable<Future> {
     return null;
   }
 
-  public getLoan(): Loan {
+  public getLoan(): Observable<Loan> {
     return null;
   }
 
-  public getCash(): Cash {
+  public getCash(): Observable<Cash> {
     return null;
   }
 
-  public getBankFacility(): BankFacility {
+  public getBankFacility(): Observable<BankFacility> {
     return null;
   }
 

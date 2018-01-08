@@ -12,7 +12,13 @@ import { BankFacility } from '../bank-facilities/bank-facility';
 })
 export class DashboardComponent implements OnInit {
   title = 'Dashboard';
-  constructor() { }
+  constructor(private dataService: DataService) { }
+
+  security: Security;
+  future: Future;
+  loan: Loan;
+  cash: Cash;
+  bank_facility: BankFacility;
 
   ngOnInit() {
   }

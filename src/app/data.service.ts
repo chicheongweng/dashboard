@@ -10,4 +10,24 @@ export class DataService {
 
   constructor() { }
 
+  public getSecurity(): Security {
+    return null;
+  }
+
+  public getFuture(): Future {
+    return null;
+  }
+
+  public getLoan(): Loan {
+    return null;
+  }
+
+  public getCash(): Cash {
+    return null;
+  }
+
+  public getBankFacility(): BankFacility {
+    return null;
+  }
+
 }

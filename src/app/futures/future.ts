@@ -5,7 +5,12 @@ export class Future {
 }
 
 export class Futures {
-  futures: Future[];
+  private futures: Future[];
+
+  constructor(futures: Future[]) {
+    this.futures = futures;
+  }
+
   public getDaily(): number {
     let total = 0;
     // tslint:disable-next-line:prefer-const
@@ -14,6 +19,7 @@ export class Futures {
     }
     return total;
   }
+
   public getAccumulated(): number {
     let total = 0;
     // tslint:disable-next-line:prefer-const

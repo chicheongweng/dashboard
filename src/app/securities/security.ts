@@ -6,6 +6,11 @@ export class Security {
 
 export class Securities {
   securities: Security[];
+
+  constructor(securities: Security[]) {
+    this.securities = securities;
+  }
+
   public getDaily(): number {
     let total = 0;
     // tslint:disable-next-line:prefer-const
@@ -14,6 +19,7 @@ export class Securities {
     }
     return total;
   }
+
   public getAccumulated(): number {
     let total = 0;
     // tslint:disable-next-line:prefer-const

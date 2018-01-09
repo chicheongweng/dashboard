@@ -7,10 +7,12 @@ import { Security } from './security';
   styleUrls: ['./securities.component.css']
 })
 export class SecuritiesComponent implements OnInit {
-
-  constructor() { }
+  securities: Security[];
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getSecurity()
+    .subscribe(securities => this.securities = securities);
   }
 
 }

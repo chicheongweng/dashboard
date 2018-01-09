@@ -40,7 +40,7 @@ export const LOANS: Loan[] = [
   {
     term: 1000000,
     mortgage_house: 2000000,
-    mortgate_marketing: 3000000,
+    mortgage_marketing: 3000000,
     personal: 4000000,
     margin: 5000000,
     advanced: 6000000

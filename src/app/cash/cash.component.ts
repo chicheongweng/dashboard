@@ -8,9 +8,11 @@ import { Cash } from './cash';
 })
 export class CashComponent implements OnInit {
   title = 'Cash';
-  constructor() { }
+  cash: Cash[];
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getCash()
+    .subscribe(cash => this.cash = cash);
   }
-
 }

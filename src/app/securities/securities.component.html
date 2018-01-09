@@ -9,15 +9,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>1234</td>
-        <td>8,000,000</td>
-        <td>18,000,000</td>
-      </tr>
-      <tr>
-        <td>5678</td>
-        <td>2,000,000</td>
-        <td>5,000,000</td>
+      <tr *ngFor="let security of securities">
+          <td>{{security.account_executive}}</td>
+          <td>{{security.daily_turnover}}</td>
+          <td>{{security.accumulated_turnover}}</td>
       </tr>
     </tbody>
   </table>

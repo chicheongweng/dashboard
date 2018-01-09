@@ -7,10 +7,11 @@ import { Loan } from './loan';
   styleUrls: ['./loans.component.css']
 })
 export class LoansComponent implements OnInit {
-
-  constructor() { }
+  loans: Loan[];
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.dataService.getLoan()
+    .subscribe(loans => this.loans = loans);
   }
-
 }

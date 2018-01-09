@@ -8,9 +8,11 @@ import { BankFacility } from './bank-facility';
 })
 export class BankFacilitiesComponent implements OnInit {
   title = 'Bank Facilities';
-  constructor() { }
+  bank_facilities: BankFacility[];
+
+  constructor(private dataServie: DataService) { }
 
   ngOnInit() {
-  }
-
+    this.dataServie.getBankFacility()
+    .subscribe(bank_facilities => this.bank_facilities = bank_facilities); }
 }

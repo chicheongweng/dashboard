@@ -14,24 +14,24 @@ export class DataService {
 
   constructor() { }
 
-  public getSecurity(): Observable<Security> {
-    return null;
+  public getSecurity(): Observable<Security[]> {
+    return of(SECURITIES);
   }
 
-  public getFuture(): Observable<Future> {
-    return null;
+  public getFuture(): Observable<Future[]> {
+    return of(FUTURES);
   }
 
-  public getLoan(): Observable<Loan> {
-    return null;
+  public getLoan(): Observable<Loan[]> {
+    return of(LOANS);
   }
 
-  public getCash(): Observable<Cash> {
-    return null;
+  public getCash(): Observable<Cash[]> {
+    return of(CASH);
   }
 
-  public getBankFacility(): Observable<BankFacility> {
-    return null;
+  public getBankFacility(): Observable<BankFacility[]> {
+    return of(BANK_FACILITIES);
   }
 
 }

@@ -7,12 +7,12 @@ import { Future, Futures } from './future';
   styleUrls: ['./futures.component.css']
 })
 export class FuturesComponent implements OnInit {
-  futures: Futures;
+  futures: Future[];
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
     this.dataService.getFuture()
-    .subscribe(futures => this.futures = new Futures(futures));
+    .subscribe(futures => this.futures = futures);
   }
 
 }

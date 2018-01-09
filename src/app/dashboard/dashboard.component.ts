@@ -15,13 +15,23 @@ export class DashboardComponent implements OnInit {
   title = 'Dashboard';
   constructor(private dataService: DataService) { }
 
-  security: Security;
-  future: Future;
-  loan: Loan;
-  cash: Cash;
-  bank_facility: BankFacility;
+  securities: Security[];
+  futures: Future[];
+  loans: Loan[];
+  cash: Cash[];
+  bank_facilities: BankFacility[];
 
   ngOnInit() {
+    this.dataService.getSecurity()
+    .subscribe(securities => this.securities = securities);
+    this.dataService.getFuture()
+    .subscribe(futures => this.futures = futures);
+    this.dataService.getLoan()
+    .subscribe(loans => this.loans = loans);
+    this.dataService.getCash()
+    .subscribe(cash => this.cash = cash);
+    this.dataService.getBankFacility()
+    .subscribe(bank_facilities => this.bank_facilities = bank_facilities);
   }
 
 }

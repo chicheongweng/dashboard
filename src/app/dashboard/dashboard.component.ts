@@ -15,11 +15,11 @@ export class DashboardComponent implements OnInit {
   title = 'Dashboard';
   constructor(private dataService: DataService) { }
 
-  securities: Security[];
-  futures: Future[];
-  loans: Loan[];
-  cash: Cash[];
-  bank_facilities: BankFacility[];
+  public securities: Security[];
+  public futures: Future[];
+  public loans: Loan[];
+  public cash: Cash[];
+  public bank_facilities: BankFacility[];
 
   ngOnInit() {
     this.dataService.getSecurity()

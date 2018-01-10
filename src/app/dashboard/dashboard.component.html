@@ -12,13 +12,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><a href="/securities">Securities</a></td>
+        <td><a routerLink="/securities">Securities</a></td>
         <td></td>
         <td>{{securities.getDaily()}}</td>
         <td>{{securities.getAccumulated()}}</td>
       </tr>
       <tr>
-        <td><a href="/futures">Futures</a></td>
+        <td><a routerLink="/futures">Futures</a></td>
         <td></td>
         <td>{{futures.getDaily()}}</td>
         <td>{{futures.getAccumulated()}}</td>
@@ -30,7 +30,7 @@
         <td>Amount (in HKD)</td>
       </tr>
       <tr>
-        <td><a href="/loans">Loans</a></td>
+        <td><a routerLink="/loans">Loans</a></td>
         <td>Margin</td>
         <td></td>
         <td>{{loans[0].margin}}</td>

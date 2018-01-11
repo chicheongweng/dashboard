@@ -8,6 +8,8 @@ import { Loan } from './loan';
 })
 export class LoansComponent implements OnInit {
   loans: Loan[];
+  currentTime;
+
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -18,6 +20,7 @@ export class LoansComponent implements OnInit {
   }
 
   loadComponent() {
+    this.currentTime = new Date();
     this.dataService.getLoan()
     .subscribe(loans => this.loans = loans);
   }

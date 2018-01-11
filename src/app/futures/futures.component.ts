@@ -8,6 +8,7 @@ import { Future, Futures } from './future';
 })
 export class FuturesComponent implements OnInit {
   futures: Future[];
+  currentTime;
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -18,6 +19,7 @@ export class FuturesComponent implements OnInit {
   }
 
   loadComponent() {
+    this.currentTime = new Date();
     this.dataService.getFuture()
     .subscribe(futures => this.futures = futures);
   }

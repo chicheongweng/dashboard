@@ -8,6 +8,8 @@ import { Security, Securities } from './security';
 })
 export class SecuritiesComponent implements OnInit {
   securities: Security[];
+  currentTime;
+
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
@@ -18,6 +20,7 @@ export class SecuritiesComponent implements OnInit {
   }
 
   loadComponent() {
+    this.currentTime = new Date();
     this.dataService.getSecurity()
     .subscribe(securities => this.securities = securities);
   }

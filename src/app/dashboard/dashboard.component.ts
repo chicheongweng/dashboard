@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
   public loans: Loan[];
   public cash: Cash[];
   public bank_facilities: BankFacility[];
+  currentTime;
 
   constructor(private dataService: DataService) { }
 
@@ -29,6 +30,7 @@ export class DashboardComponent implements OnInit {
   }
 
   loadComponent() {
+    this.currentTime = new Date();
     this.dataService.getSecurity()
     .subscribe(securities => this.securities = new Securities(securities));
     this.dataService.getFuture()

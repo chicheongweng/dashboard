@@ -10,19 +10,19 @@
     <tbody>
       <tr>
         <td>Term</td>
-        <td>{{loans[0].term}}</td>
+        <td>{{loans[0].term | currency:'HKD' | slice:3}}</td>
       </tr>
       <tr>
         <td>Mortgage House</td>
-        <td>{{loans[0].mortgage_house}}</td>
+        <td>{{loans[0].mortgage_house | currency:'HKD' | slice:3}}</td>
       </tr>
       <tr>
         <td>Mortgage Marketing</td>
-        <td>{{loans[0].mortgage_marketing}}</td>
+        <td>{{loans[0].mortgage_marketing | currency:'HKD' | slice:3}}</td>
       </tr>
       <tr>
         <td>Personal</td>
-        <td>{{loans[0].personal}}</td>
+        <td>{{loans[0].personal | currency:'HKD' | slice:3}}</td>
       </tr>
     </tbody>
   </table>

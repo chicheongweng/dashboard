@@ -5,14 +5,14 @@
       <tr>
         <th>Account Executive</th>
         <th>Daily Turnover (in HKD)</th>
-        <th>Cumulative (MT) (in HKD)</th>
+        <th>Cumulative (MTD) (in HKD)</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let security of securities">
           <td>{{security.account_executive}}</td>
-          <td>{{security.daily_turnover}}</td>
-          <td>{{security.accumulated_turnover}}</td>
+          <td>{{security.daily_turnover | currency:'HKD' | slice:3}}</td>
+          <td>{{security.accumulated_turnover | currency:'HKD' | slice:3}}</td>
       </tr>
     </tbody>
   </table>

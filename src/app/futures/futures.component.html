@@ -5,14 +5,14 @@
       <tr>
         <th>Account Executive</th>
         <th>Daily Turnover (in HKD)</th>
-        <th>Cumulative (MT) (in HKD)</th>
+        <th>Cumulative (MTD) (in HKD)</th>
       </tr>
     </thead>
     <tbody>
         <tr *ngFor="let future of futures">
             <td>{{future.account_executive}}</td>
-            <td>{{future.daily_turnover}}</td>
-            <td>{{future.accumulated_turnover}}</td>
+            <td>{{future.daily_turnover | currency:'HKD' | slice:3}}</td>
+            <td>{{future.accumulated_turnover | currency:'HKD' | slice:3}}</td>
         </tr>
     </tbody>
   </table>

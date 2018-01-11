@@ -14,14 +14,14 @@
       <tr>
         <td><a routerLink="/securities">Securities</a></td>
         <td></td>
-        <td>{{securities.getDaily()}}</td>
-        <td>{{securities.getAccumulated()}}</td>
+        <td>{{securities.getDaily() | currency:'HKD' | slice:3 }}</td>
+        <td>{{securities.getAccumulated() | currency:'HKD' | slice:3}}</td>
       </tr>
       <tr>
         <td><a routerLink="/futures">Futures</a></td>
         <td></td>
-        <td>{{futures.getDaily()}}</td>
-        <td>{{futures.getAccumulated()}}</td>
+        <td>{{futures.getDaily() | currency:'HKD' | slice:3}}</td>
+        <td>{{futures.getAccumulated() | currency:'HKD' | slice:3}}</td>
       </tr>
       <tr>
         <td></td>
@@ -33,31 +33,31 @@
         <td><a routerLink="/loans">Loans</a></td>
         <td>Margin</td>
         <td></td>
-        <td>{{loans[0].margin}}</td>
+        <td>{{loans[0].margin | currency:'HKD' | slice:3}}</td>
       </tr>
       <tr>
         <td></td>
         <td>Advanced</td>
         <td></td>
-        <td>{{loans[0].advanced}}</td>
+        <td>{{loans[0].advanced | currency:'HKD' | slice:3}}</td>
       </tr>
       <tr>
         <td>Cash</td>
         <td></td>
         <td></td>
-        <td>{{cash[0].cash}}</td>
+        <td>{{cash[0].cash | currency:'HKD' | slice:3}}</td>
       </tr>
       <tr>
         <td>Bank Facilities</td>
         <td>Utilized</td>
         <td></td>
-        <td>{{bank_facilities[0].utilized}}</td>
+        <td>{{bank_facilities[0].utilized | currency:'HKD' | slice:3}}</td>
       </tr>
       <tr>
         <td></td>
         <td>Un-utilized</td>
         <td></td>
-        <td>{{bank_facilities[0].unutilized}}</td>
+        <td>{{bank_facilities[0].unutilized | currency:'HKD' | slice:3}}</td>
       </tr>
     </tbody>
   </table>

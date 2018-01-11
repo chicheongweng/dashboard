@@ -5,7 +5,7 @@ import { Cash } from '../cash/cash';
 import { Loan } from '../loans/loan';
 import { Security, Securities } from '../securities/security';
 import { BankFacility } from '../bank-facilities/bank-facility';
-
+import { CurrencyPipe, SlicePipe } from '@angular/common';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',

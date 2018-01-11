@@ -11,6 +11,13 @@ export class SecuritiesComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.loadComponent();
+    setInterval(() => {
+      this.loadComponent();
+    }, 1000);
+  }
+
+  loadComponent() {
     this.dataService.getSecurity()
     .subscribe(securities => this.securities = securities);
   }

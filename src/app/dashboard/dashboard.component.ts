@@ -13,15 +13,22 @@ import { CurrencyPipe, SlicePipe } from '@angular/common';
 })
 export class DashboardComponent implements OnInit {
   title = 'Dashboard';
-  constructor(private dataService: DataService) { }
-
   public securities: Securities;
   public futures: Futures;
   public loans: Loan[];
   public cash: Cash[];
   public bank_facilities: BankFacility[];
 
+  constructor(private dataService: DataService) { }
+
   ngOnInit() {
+    this.loadComponent();
+    setInterval(() => {
+      this.loadComponent();
+    }, 1000);
+  }
+
+  loadComponent() {
     this.dataService.getSecurity()
     .subscribe(securities => this.securities = new Securities(securities));
     this.dataService.getFuture()

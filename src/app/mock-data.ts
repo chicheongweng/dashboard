@@ -13,6 +13,43 @@ function getRandomInt(min, max) {
   return Math.floor(getRandomFloat(min, max));
 }
 
+export function getFutures(): Future[] {
+  return [{
+    account_executive: '1234',
+    daily_turnover: getRandomInt(5000, 5000000),
+    accumulated_turnover: getRandomInt(5000, 5000000)
+  },
+  {
+    account_executive: '5678',
+    daily_turnover: getRandomInt(5000, 5000000),
+    accumulated_turnover: getRandomInt(5000, 5000000)
+  }];
+}
+
+export function getSecurities(): Future[] {
+  return [{
+    account_executive: '1234',
+    daily_turnover: getRandomInt(5000, 5000000),
+    accumulated_turnover: getRandomInt(5000, 5000000)
+  },
+  {
+    account_executive: '5678',
+    daily_turnover: getRandomInt(5000, 5000000),
+    accumulated_turnover: getRandomInt(5000, 5000000)
+  }];
+}
+
+export function getLoans(): Loan[] {
+  return  [{
+    term: getRandomInt(5000, 5000000),
+    mortgage_house: getRandomInt(5000, 5000000),
+    mortgage_marketing: getRandomInt(5000, 5000000),
+    personal: getRandomInt(5000, 5000000),
+    margin: getRandomInt(5000, 5000000),
+    advanced: getRandomInt(5000, 5000000)
+  }];
+}
+
 export const FUTURES: Future[] = [
   {
     account_executive: '1234',
@@ -26,7 +63,8 @@ export const FUTURES: Future[] = [
   }
 ];
 
-export const SECURITIES: Security[] = [
+export const
+SECURITIES: Security[] = [
   {
     account_executive: '1234',
     daily_turnover: getRandomInt(5000, 5000000),

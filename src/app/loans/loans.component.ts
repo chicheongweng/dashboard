@@ -11,6 +11,13 @@ export class LoansComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    this.loadComponent();
+    setInterval(() => {
+      this.loadComponent();
+    }, 1000);
+  }
+
+  loadComponent() {
     this.dataService.getLoan()
     .subscribe(loans => this.loans = loans);
   }

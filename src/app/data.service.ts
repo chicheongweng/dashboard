@@ -5,7 +5,7 @@ import { Loan } from './loans/loan';
 import { Security } from './securities/security';
 import { BankFacility } from './bank-facilities/bank-facility';
 import { SECURITIES, FUTURES, LOANS, CASH, BANK_FACILITIES } from './mock-data';
-
+import { getSecurities, getFutures, getLoans} from './mock-data';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 
@@ -15,15 +15,15 @@ export class DataService {
   constructor() { }
 
   public getSecurity(): Observable<Security[]> {
-    return of(SECURITIES);
+    return of(getSecurities());
   }
 
   public getFuture(): Observable<Future[]> {
-    return of(FUTURES);
+    return of(getFutures());
   }
 
   public getLoan(): Observable<Loan[]> {
-    return of(LOANS);
+    return of(getLoans());
   }
 
   public getCash(): Observable<Cash[]> {

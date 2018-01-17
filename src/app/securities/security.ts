@@ -3,7 +3,6 @@ export class Security {
   daily_turnover: number;
   accumulated_turnover: number;
 }
-
 export class Securities {
   securities: Security[];
 

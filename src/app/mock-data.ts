@@ -26,7 +26,7 @@ export function getFutures(): Future[] {
   }];
 }
 
-export function getSecurities(): Future[] {
+export function getSecurities(): Security[] {
   return [{
     account_executive: '1234',
     daily_turnover: getRandomInt(5000, 5000000),

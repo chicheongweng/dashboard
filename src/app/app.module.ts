@@ -11,6 +11,7 @@ import { BankFacilitiesComponent } from './bank-facilities/bank-facilities.compo
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DataService } from './data.service';
+import { DataTableModule } from 'angular-4-data-table/src/index';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DataService } from './data.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DataTableModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

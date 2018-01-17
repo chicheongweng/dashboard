@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Security, Securities } from './security';
+import { DataTableResource } from 'angular-4-data-table';
 @Component({
   selector: 'app-securities',
   templateUrl: './securities.component.html',

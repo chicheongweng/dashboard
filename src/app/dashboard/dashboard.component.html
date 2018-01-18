@@ -10,13 +10,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngIf="securities">
         <td><a routerLink="/securities">Securities</a></td>
         <td></td>
         <td>{{securities.getDaily() | currency:'HKD' | slice:3 }}</td>
         <td>{{securities.getAccumulated() | currency:'HKD' | slice:3}}</td>
       </tr>
-      <tr>
+      <tr *ngIf="futures">
         <td><a routerLink="/futures">Futures</a></td>
         <td></td>
         <td>{{futures.getDaily() | currency:'HKD' | slice:3}}</td>

@@ -16,7 +16,7 @@ export class LoansComponent implements OnInit {
     this.loadComponent();
     setInterval(() => {
       this.loadComponent();
-    }, 1000);
+    }, 2000);
   }
 
   loadComponent() {

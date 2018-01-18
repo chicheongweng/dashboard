@@ -33,9 +33,11 @@ export class DashboardComponent implements OnInit {
     this.currentTime = new Date();
     this.dataService.getSecurity(null).then(securities => {
       this.securities = new Securities(securities.items);
+      console.log('securities daily = ', this.securities.getDaily());
     });
     this.dataService.getFuture(null).then(futures => {
       this.futures = new Futures(futures.items);
+      console.log('futures daily = ', this.securities.getDaily());
     });
     this.dataService.getLoan()
       .subscribe(loans => this.loans = loans);

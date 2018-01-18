@@ -8,18 +8,23 @@ import { SECURITIES, FUTURES, LOANS, CASH, BANK_FACILITIES } from './mock-data';
 import { getSecurities, getFutures, getLoans} from './mock-data';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
-
+import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../environments/environment';
 @Injectable()
 export class DataService {
+  private apiUrl;
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+    this.apiUrl = environment.apiUrl;
+  }
 
   public getSecurity(): Observable<Security[]> {
-    return of(getSecurities());
+    return this.http.get<Security[]>(this.apiUrl + '/securities');
   }
 
   public getFuture(): Observable<Future[]> {
-    return of(getFutures());
+    return this.http.get<Future[]>(this.apiUrl + '/futures');
   }
 
   public getLoan(): Observable<Loan[]> {

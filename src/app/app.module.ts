@@ -12,6 +12,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DataService } from './data.service';
 import { DataTableModule } from 'angular-4-data-table/src/index';
+import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { DataTableModule } from 'angular-4-data-table/src/index';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DataTableModule
+    DataTableModule,
+    HttpModule,
+    HttpClientModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

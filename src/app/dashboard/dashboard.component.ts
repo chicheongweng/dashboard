@@ -33,7 +33,6 @@ export class DashboardComponent implements OnInit {
   }
 
   loadComponent() {
-    const params = { 'offset': 0, 'limit': 10 };
     this.currentTime = new Date();
     this.dataService.getSecurity(this.params).then(securities => {
         this.securities = new Securities(securities.items);

@@ -8,10 +8,10 @@ import { environment } from '../../environments/environment';
 })
 export class FuturesComponent implements OnInit {
   currentTime;
-  itemResource;
   items = [];
   itemCount = 0;
   apiUrl;
+  params;
 
   ngOnInit() {
 
@@ -19,6 +19,7 @@ export class FuturesComponent implements OnInit {
 
   constructor(private dataService: DataService) {
     this.apiUrl = environment.apiUrl;
+    this.params = environment.params;
   }
 
   reloadItems(params) {

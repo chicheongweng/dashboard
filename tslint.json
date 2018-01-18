@@ -4,6 +4,7 @@
   ],
   "rules": {
     "no-unused-variable": true,
+    "no-unused-expression": true,
     "arrow-return-shorthand": true,
     "callable-types": true,
     "class-name": true,

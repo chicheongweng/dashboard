@@ -10,27 +10,10 @@ import { environment } from '../../environments/environment';
 export class SecuritiesComponent implements OnInit {
   securities: Security[];
   currentTime;
-  itemResource;
   items = [];
   itemCount = 0;
   apiUrl;
-
-  /*
-    constructor(private dataService: DataService) { }
-
-    ngOnInit() {
-      this.loadComponent();
-      setInterval(() => {
-        this.loadComponent();
-      }, 1000);
-    }
-
-    loadComponent() {
-      this.currentTime = new Date();
-      this.dataService.getSecurity()
-      .subscribe(securities => this.securities = securities);
-    }
-    */
+  params;
 
   ngOnInit() {
 
@@ -38,9 +21,11 @@ export class SecuritiesComponent implements OnInit {
 
   constructor(private dataService: DataService) {
     this.apiUrl = environment.apiUrl;
+    this.params = environment.params;
   }
 
   reloadItems(params) {
+    console.log('securities params = ', params);
     this.currentTime = new Date();
     this.dataService.getSecurity(params).then(
       result => {

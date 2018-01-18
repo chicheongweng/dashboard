@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
 import { AppComponent } from './app.component';
 import { SecuritiesComponent } from './securities/securities.component';
 import { FuturesComponent } from './futures/futures.component';

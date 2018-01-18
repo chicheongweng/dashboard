@@ -31,10 +31,10 @@ export class DashboardComponent implements OnInit {
 
   loadComponent() {
     this.currentTime = new Date();
-    this.dataService.getSecurity()
-    .subscribe(securities => this.securities = new Securities(securities));
-    this.dataService.getFuture()
-    .subscribe(futures => this.futures = new Futures(futures));
+    //this.dataService.getSecurity()
+    //.subscribe(securities => this.securities = new Securities(securities));
+    //this.dataService.getFuture()
+    //.subscribe(futures => this.futures = new Futures(futures));
     this.dataService.getLoan()
     .subscribe(loans => this.loans = loans);
     this.dataService.getCash()

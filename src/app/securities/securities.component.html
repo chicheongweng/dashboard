@@ -39,11 +39,17 @@
             [property]="'daily_turnover'"
             [header]="'Daily Turnover'"
             [sortable]="true">
+            <ng-template #dataTableCell let-item="item">
+              <span>{{item.daily_turnover | currency: 'HKD' | slice: 3}}</span>
+            </ng-template>
         </data-table-column>
         <data-table-column
             [property]="'accumulated_turnover'"
             [header]="'Accumulated Turnover'"
             [sortable]="true">
+            <ng-template #dataTableCell let-item="item">
+              <span>{{item.accumulated_turnover | currency:'HKD' | slice: 3}}</span>
+            </ng-template>
         </data-table-column>
     </data-table>
 </div>

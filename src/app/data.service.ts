@@ -16,6 +16,10 @@ import { DataTableParams } from 'angular-4-data-table/src/index';
 function paramsToQueryString(params: DataTableParams) {
   const result = [];
 
+  if (params == null) {
+    return null;
+  }
+
   if (params.offset != null) {
       result.push(['_start', params.offset]);
   }
@@ -39,8 +43,8 @@ export class DataService {
     this.apiUrl = environment.apiUrl;
   }
 
-  public getSecurity(params: DataTableParams ) {
-    const url = this.apiUrl + '/securities?' + paramsToQueryString(params);
+  public getSecurity(params?: DataTableParams ) {
+    const url = params ? this.apiUrl + '/securities?' + paramsToQueryString(params) : this.apiUrl + '/securities';
     return this.http.get(url).toPromise()
     .then((resp: Response) => ({
         items: resp.json(),
@@ -49,7 +53,7 @@ export class DataService {
   }
 
   public getFuture(params: DataTableParams ) {
-    const url = this.apiUrl + '/futures?' + paramsToQueryString(params);
+    const url = params ? this.apiUrl + '/futures?' + paramsToQueryString(params) : this.apiUrl + '/futures';
     return this.http.get(url).toPromise()
     .then((resp: Response) => ({
         items: resp.json(),

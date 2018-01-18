@@ -7,7 +7,7 @@
     "start": "ng serve --host 0.0.0.0 --disable-host-check",
     "build": "ng build --prod",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "ng lint --type-check",
     "e2e": "ng e2e"
   },
   "private": true,

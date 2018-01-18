@@ -1,23 +1,3 @@
-<!--div class="container">
-  <p style="text-align:center" ><b>Securities</b> {{currentTime}}</p>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Account Executive</th>
-        <th>Daily Turnover (in HKD)</th>
-        <th>Cumulative (MTD) (in HKD)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let security of securities">
-          <td>{{security.account_executive}}</td>
-          <td>{{security.daily_turnover | currency:'HKD' | slice:3}}</td>
-          <td>{{security.accumulated_turnover | currency:'HKD' | slice:3}}</td>
-      </tr>
-    </tbody>
-  </table>
-</div-->
-
 <div class="container" style="margin: auto; max-width: 1000px; margin-bottom: 50px;">
     <p style="text-align:center" ><b>Securities</b> {{currentTime}}</p>
     <data-table id="persons-grid"

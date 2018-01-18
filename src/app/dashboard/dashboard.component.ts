@@ -32,17 +32,17 @@ export class DashboardComponent implements OnInit {
   loadComponent() {
     this.currentTime = new Date();
     this.dataService.getSecurity(null).then(securities => {
-        this.securities = new Securities(securities.items);
-      });
+      this.securities = new Securities(securities.items);
+    });
     this.dataService.getFuture(null).then(futures => {
-        this.futures = new Futures(futures.items);
-      });
+      this.futures = new Futures(futures.items);
+    });
     this.dataService.getLoan()
-    .subscribe(loans => this.loans = loans);
+      .subscribe(loans => this.loans = loans);
     this.dataService.getCash()
-    .subscribe(cash => this.cash = cash);
+      .subscribe(cash => this.cash = cash);
     this.dataService.getBankFacility()
-    .subscribe(bank_facilities => this.bank_facilities = bank_facilities);
+      .subscribe(bank_facilities => this.bank_facilities = bank_facilities);
   }
 
 }

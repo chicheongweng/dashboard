@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Future, Futures } from './future';
-import { Http, Response } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-futures',
@@ -10,7 +7,6 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./futures.component.css']
 })
 export class FuturesComponent implements OnInit {
-  futures: Future[];
   currentTime;
   itemResource;
   items = [];
@@ -21,7 +17,7 @@ export class FuturesComponent implements OnInit {
 
   }
 
-  constructor(private http: Http, private dataService: DataService) {
+  constructor(private dataService: DataService) {
     this.apiUrl = environment.apiUrl;
   }
 

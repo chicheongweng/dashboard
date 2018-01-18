@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { Security, Securities } from './security';
-import { DataTableResource } from 'angular-4-data-table';
-import { getSecurities } from '../mock-data';
-import { Http, Response } from '@angular/http';
-import { HttpClient } from '@angular/common/http';
+import { Security } from './security';
 import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-securities',
@@ -40,7 +36,7 @@ export class SecuritiesComponent implements OnInit {
 
   }
 
-  constructor(private http: Http, private dataService: DataService) {
+  constructor(private dataService: DataService) {
     this.apiUrl = environment.apiUrl;
   }
 

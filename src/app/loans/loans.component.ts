@@ -14,9 +14,6 @@ export class LoansComponent implements OnInit {
 
   ngOnInit() {
     this.loadComponent();
-    setInterval(() => {
-      this.loadComponent();
-    }, 2000);
   }
 
   loadComponent() {

@@ -26,20 +26,30 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.currentTime = new Date();
+    this.loadSecurities();
+    this.loadFutures();
     this.loadComponent();
     setInterval(() => {
-      this.loadComponent();
+      this.currentTime = new Date();
+      this.loadSecurities();
+      this.loadFutures();
     }, 1000);
   }
 
-  loadComponent() {
-    this.currentTime = new Date();
+  loadSecurities() {
     this.dataService.getSecurity(this.params).then(securities => {
-        this.securities = new Securities(securities.items);
-      });
+      this.securities = new Securities(securities.items);
+    });
+  }
+
+  loadFutures() {
     this.dataService.getFuture(this.params).then(futures => {
-        this.futures = new Futures(futures.items);
-      });
+      this.futures = new Futures(futures.items);
+    });
+  }
+
+  loadComponent() {
     this.dataService.getLoan()
     .subscribe(loans => this.loans = loans);
     this.dataService.getCash()

@@ -4,17 +4,21 @@ Dashboard ECG project.
 
 ## Installation and Build
 
-Run following commands:
-`npm install`
-`npm build` (use --prod flag for production build)
+Run following commands (use --prod flag ofr production build): <br />
+`npm install` <br />
+`npm build` <br />
 
-## Development server
+## Development environment
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run following commands: <br />
+nohup json-server --watch db.json& <br />
+sudo ng serve <br />
 
-## Production server
+## Production environment
 
-Run `sudo ng serve --port --aot --host 0.0.0.0 --port 80 --disable-host-check &`
+Run following commands: <br />
+nohup json-server --watch db.json& <br />
+sudo ng serve --prod --host 0.0.0.0 --port 80 --disable-host-check& <br />
 
 ## Code scaffolding
 

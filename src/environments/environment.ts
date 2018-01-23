@@ -5,6 +5,7 @@
 
 export const environment = {
   production: false,
+  name: 'DEV',
   apiUrl: 'http://localhost:3000',
   params: { 'offset': 0, 'limit': 10 }
 };

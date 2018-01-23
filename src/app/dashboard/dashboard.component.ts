@@ -20,9 +20,11 @@ export class DashboardComponent implements OnInit {
   public bank_facilities: BankFacility[];
   currentTime;
   private params;
+  envName: string;
 
   constructor(private dataService: DataService) {
     this.params = environment.params;
+    this.envName = environment.name;
   }
 
   ngOnInit() {

@@ -1,10 +1,20 @@
-# Dashboard
+## Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
+Dashboard ECG project.
+
+## Installation and Build
+
+Run following commands:
+`npm install`
+`npm build` (use --prod flag for production build)
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Production server
+
+Run `sudo ng serve --port --aot --host 0.0.0.0 --port 80 --disable-host-check &`
 
 ## Code scaffolding
 

@@ -11,12 +11,14 @@ Run following commands (use --prod flag ofr production build): <br />
 ## Development environment
 
 Run following commands: <br />
+`python gendata.py` <br />
 `nohup json-server --watch db.json&` <br />
 `sudo ng serve` <br />
 
 ## Production environment
 
 Run following commands: <br />
+`python gendata.py` <br />
 `nohup json-server --watch db.json&` <br />
 `sudo ng serve --prod --host 0.0.0.0 --port 80 --disable-host-check&` <br />
 

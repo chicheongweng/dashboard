@@ -16,7 +16,10 @@ export class SecuritiesComponent implements OnInit {
   params;
 
   ngOnInit() {
-
+    setInterval(() => {
+      this.currentTime = new Date();
+      this.reloadItems(this.params);
+    }, 2000);
   }
 
   constructor(private dataService: DataService) {

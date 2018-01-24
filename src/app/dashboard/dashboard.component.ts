@@ -36,7 +36,7 @@ export class DashboardComponent implements OnInit {
       this.currentTime = new Date();
       this.loadSecurities();
       this.loadFutures();
-    }, 1000);
+    }, 2000);
   }
 
   loadSecurities() {

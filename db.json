@@ -1,0 +1,46 @@
+{
+    "securities": [
+        {
+            "accumulated": 293687, 
+            "account_executive": 49798, 
+            "daily": 130139
+        }, 
+        {
+            "accumulated": 236811, 
+            "account_executive": 63260, 
+            "daily": 132666
+        }, 
+        {
+            "accumulated": 349474, 
+            "account_executive": 69076, 
+            "daily": 177940
+        }, 
+        {
+            "accumulated": 277333, 
+            "account_executive": 42830, 
+            "daily": 143001
+        }, 
+        {
+            "accumulated": 243953, 
+            "account_executive": 68876, 
+            "daily": 119533
+        }
+    ], 
+    "futures": [
+        {
+            "accumulated": 298132, 
+            "account_executive": 25043, 
+            "daily": 102520
+        }, 
+        {
+            "accumulated": 356956, 
+            "account_executive": 74749, 
+            "daily": 183584
+        }, 
+        {
+            "accumulated": 362073, 
+            "account_executive": 31621, 
+            "daily": 184690
+        }
+    ]
+}

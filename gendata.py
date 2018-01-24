@@ -1,53 +1,62 @@
 import json
 import random
-import sleep
+import time
 
-NUM_OF_SECURITIES = 5
-NUM_OF_FUTURES = 3
+NUM_OF_SECURITIES = 30
+NUM_OF_FUTURES = 20
 OUTFILE = "db.json"
 
-class Security:
+class Item:
   def __init__(self, account_executive, daily, accumulated):
     self.account_executive = account_executive
     self.daily = daily
     self.accumulated = accumulated
 
-  def toJSON(self):
+  def inc(self):
+    delta = random.randint(1000,9999)
+    self.daily += delta
+    self.accumulated += delta
+
+  def toString(self):
     return json.dumps(self, default=lambda o: o.__dict__,
             sort_keys=True, indent=4)
 
-class Future:
-  def __init__(self, account_executive, daily, accumulated):
-    self.account_executive = account_executive
-    self.daily = daily
-    self.accumulated = accumulated
+  def toJSON(self):
+    return json.loads(self.toString())
+
+class Items:
+  def __init__(self, total):
+    self.items = []
+    for _ in xrange(total):
+      account_executive = random.randint(10000,99999)
+      daily = random.randint(100000,200000)
+      accumulated = daily + random.randint(100000,200000)
+      self.items.append(Item(account_executive, daily, accumulated))
+
+  def inc(self):
+    for item in self.items:
+      item.inc()
 
   def toJSON(self):
-    return json.dumps(self, default=lambda o: o.__dict__,
-            sort_keys=True, indent=4)
+    l = []
+    for item in self.items:
+      l.append(item.toJSON())
+    return l
 
-securities = []
-futures = []
+  def toString(self):
+    return json.dumps(self.toJSON(), indent=4)
 
-for _ in xrange(NUM_OF_SECURITIES):
-  account_executive = random.randint(10000,99999)
-  daily = random.randint(100000,200000)
-  accumulated = daily + random.randint(100000,200000)
-  securities.append(json.loads(Security(account_executive, daily, accumulated).toJSON()))
-
-for _ in xrange(NUM_OF_FUTURES):
-  account_executive = random.randint(10000,99999)
-  daily = random.randint(100000,200000)
-  accumulated = daily + random.randint(100000,200000)
-  futures.append(json.loads(Future(account_executive, daily, accumulated).toJSON()))
-
-data = {
-  "securities": securities,
-  "futures": futures
-}
+securities = Items(NUM_OF_SECURITIES)
+futures = Items(NUM_OF_FUTURES)
 
 while True:
+  data = {
+  "securities": securities.toJSON(),
+  "futures": futures.toJSON()
+  }
+  print data
   with open(OUTFILE, 'w') as outfile:
     json.dump(data, outfile, indent=4)
-  sleep(5)
-
+  time.sleep(5)
+  securities.inc()
+  futures.inc()

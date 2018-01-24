@@ -1,16 +1,256 @@
 {
     "securities": [
         {
-            "accumulated": 342433, 
-            "account_executive": 32606, 
-            "daily": 194740
+            "accumulated_turnover": 305181, 
+            "account_executive": 36591, 
+            "daily_turnover": 180205
+        }, 
+        {
+            "accumulated_turnover": 357483, 
+            "account_executive": 72773, 
+            "daily_turnover": 194619
+        }, 
+        {
+            "accumulated_turnover": 416652, 
+            "account_executive": 59984, 
+            "daily_turnover": 250980
+        }, 
+        {
+            "accumulated_turnover": 365182, 
+            "account_executive": 28683, 
+            "daily_turnover": 217224
+        }, 
+        {
+            "accumulated_turnover": 326845, 
+            "account_executive": 49366, 
+            "daily_turnover": 174825
+        }, 
+        {
+            "accumulated_turnover": 413264, 
+            "account_executive": 87616, 
+            "daily_turnover": 247389
+        }, 
+        {
+            "accumulated_turnover": 372003, 
+            "account_executive": 19379, 
+            "daily_turnover": 176405
+        }, 
+        {
+            "accumulated_turnover": 370900, 
+            "account_executive": 28782, 
+            "daily_turnover": 231041
+        }, 
+        {
+            "accumulated_turnover": 357918, 
+            "account_executive": 66062, 
+            "daily_turnover": 213608
+        }, 
+        {
+            "accumulated_turnover": 278137, 
+            "account_executive": 67544, 
+            "daily_turnover": 163099
+        }, 
+        {
+            "accumulated_turnover": 374158, 
+            "account_executive": 38738, 
+            "daily_turnover": 211618
+        }, 
+        {
+            "accumulated_turnover": 378724, 
+            "account_executive": 57910, 
+            "daily_turnover": 242573
+        }, 
+        {
+            "accumulated_turnover": 415876, 
+            "account_executive": 11394, 
+            "daily_turnover": 249167
+        }, 
+        {
+            "accumulated_turnover": 331256, 
+            "account_executive": 31340, 
+            "daily_turnover": 208135
+        }, 
+        {
+            "accumulated_turnover": 357887, 
+            "account_executive": 26968, 
+            "daily_turnover": 220290
+        }, 
+        {
+            "accumulated_turnover": 411037, 
+            "account_executive": 77357, 
+            "daily_turnover": 221032
+        }, 
+        {
+            "accumulated_turnover": 421022, 
+            "account_executive": 11301, 
+            "daily_turnover": 234839
+        }, 
+        {
+            "accumulated_turnover": 346230, 
+            "account_executive": 61452, 
+            "daily_turnover": 228551
+        }, 
+        {
+            "accumulated_turnover": 405824, 
+            "account_executive": 54570, 
+            "daily_turnover": 226304
+        }, 
+        {
+            "accumulated_turnover": 386672, 
+            "account_executive": 24072, 
+            "daily_turnover": 213634
+        }, 
+        {
+            "accumulated_turnover": 411394, 
+            "account_executive": 55659, 
+            "daily_turnover": 229080
+        }, 
+        {
+            "accumulated_turnover": 441926, 
+            "account_executive": 41343, 
+            "daily_turnover": 257831
+        }, 
+        {
+            "accumulated_turnover": 359513, 
+            "account_executive": 32348, 
+            "daily_turnover": 210422
+        }, 
+        {
+            "accumulated_turnover": 435370, 
+            "account_executive": 13480, 
+            "daily_turnover": 266171
+        }, 
+        {
+            "accumulated_turnover": 345773, 
+            "account_executive": 44351, 
+            "daily_turnover": 176851
+        }, 
+        {
+            "accumulated_turnover": 304264, 
+            "account_executive": 46017, 
+            "daily_turnover": 196587
+        }, 
+        {
+            "accumulated_turnover": 400357, 
+            "account_executive": 82335, 
+            "daily_turnover": 274386
+        }, 
+        {
+            "accumulated_turnover": 332500, 
+            "account_executive": 63287, 
+            "daily_turnover": 200057
+        }, 
+        {
+            "accumulated_turnover": 355369, 
+            "account_executive": 70347, 
+            "daily_turnover": 156936
+        }, 
+        {
+            "accumulated_turnover": 307261, 
+            "account_executive": 41842, 
+            "daily_turnover": 191663
         }
     ], 
     "futures": [
         {
-            "accumulated": 387179, 
-            "account_executive": 57921, 
-            "daily": 209154
+            "accumulated_turnover": 436939, 
+            "account_executive": 79714, 
+            "daily_turnover": 261626
+        }, 
+        {
+            "accumulated_turnover": 402950, 
+            "account_executive": 69824, 
+            "daily_turnover": 237079
+        }, 
+        {
+            "accumulated_turnover": 405901, 
+            "account_executive": 94749, 
+            "daily_turnover": 207711
+        }, 
+        {
+            "accumulated_turnover": 387511, 
+            "account_executive": 42934, 
+            "daily_turnover": 243353
+        }, 
+        {
+            "accumulated_turnover": 367600, 
+            "account_executive": 22216, 
+            "daily_turnover": 221397
+        }, 
+        {
+            "accumulated_turnover": 404259, 
+            "account_executive": 73206, 
+            "daily_turnover": 236312
+        }, 
+        {
+            "accumulated_turnover": 346931, 
+            "account_executive": 86696, 
+            "daily_turnover": 198702
+        }, 
+        {
+            "accumulated_turnover": 321194, 
+            "account_executive": 89273, 
+            "daily_turnover": 178044
+        }, 
+        {
+            "accumulated_turnover": 377177, 
+            "account_executive": 60258, 
+            "daily_turnover": 237120
+        }, 
+        {
+            "accumulated_turnover": 378682, 
+            "account_executive": 75954, 
+            "daily_turnover": 278094
+        }, 
+        {
+            "accumulated_turnover": 451784, 
+            "account_executive": 80801, 
+            "daily_turnover": 254870
+        }, 
+        {
+            "accumulated_turnover": 364601, 
+            "account_executive": 55994, 
+            "daily_turnover": 224242
+        }, 
+        {
+            "accumulated_turnover": 369582, 
+            "account_executive": 48259, 
+            "daily_turnover": 181604
+        }, 
+        {
+            "accumulated_turnover": 367936, 
+            "account_executive": 78821, 
+            "daily_turnover": 191071
+        }, 
+        {
+            "accumulated_turnover": 362472, 
+            "account_executive": 33956, 
+            "daily_turnover": 206642
+        }, 
+        {
+            "accumulated_turnover": 380176, 
+            "account_executive": 23852, 
+            "daily_turnover": 240738
+        }, 
+        {
+            "accumulated_turnover": 441968, 
+            "account_executive": 48638, 
+            "daily_turnover": 254643
+        }, 
+        {
+            "accumulated_turnover": 358844, 
+            "account_executive": 57376, 
+            "daily_turnover": 201205
+        }, 
+        {
+            "accumulated_turnover": 330144, 
+            "account_executive": 45416, 
+            "daily_turnover": 209746
+        }, 
+        {
+            "accumulated_turnover": 330003, 
+            "account_executive": 30632, 
+            "daily_turnover": 203256
         }
     ]
 }

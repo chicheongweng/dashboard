@@ -9,13 +9,13 @@ OUTFILE = "db.json"
 class Item:
   def __init__(self, account_executive, daily, accumulated):
     self.account_executive = account_executive
-    self.daily = daily
-    self.accumulated = accumulated
+    self.daily_turnover = daily
+    self.accumulated_turnover = accumulated
 
   def inc(self):
     delta = random.randint(1000,9999)
-    self.daily += delta
-    self.accumulated += delta
+    self.daily_turnover += delta
+    self.accumulated_turnover += delta
 
   def toString(self):
     return json.dumps(self, default=lambda o: o.__dict__,

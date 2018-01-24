@@ -4,6 +4,7 @@ import time
 
 NUM_OF_SECURITIES = 30
 NUM_OF_FUTURES = 20
+FREQ = 4
 OUTFILE = "db.json"
 
 class Item:
@@ -54,9 +55,9 @@ while True:
   "securities": securities.toJSON(),
   "futures": futures.toJSON()
   }
-  print data
+  #print data
   with open(OUTFILE, 'w') as outfile:
     json.dump(data, outfile, indent=4)
-  time.sleep(5)
+  time.sleep(FREQ)
   securities.inc()
   futures.inc()

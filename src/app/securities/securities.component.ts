@@ -30,6 +30,7 @@ export class SecuritiesComponent implements OnInit {
   reloadItems(params) {
     console.log('securities params = ', params);
     this.currentTime = new Date();
+    this.params = params;
     this.dataService.getSecurity(params).then(
       result => {
         this.items = result.items;

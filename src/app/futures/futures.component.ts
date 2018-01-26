@@ -27,6 +27,7 @@ export class FuturesComponent implements OnInit {
 
   reloadItems(params) {
     this.currentTime = new Date();
+    this.params = params;
     this.dataService.getFuture(params).then(
       result => {
         this.items = result.items;

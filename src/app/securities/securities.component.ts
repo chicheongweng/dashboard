@@ -17,7 +17,6 @@ export class SecuritiesComponent implements OnInit {
 
   ngOnInit() {
     setInterval(() => {
-      this.currentTime = new Date();
       this.reloadItems(this.params);
     }, 2000);
   }
@@ -28,11 +27,10 @@ export class SecuritiesComponent implements OnInit {
   }
 
   reloadItems(params) {
-    console.log('securities params = ', params);
-    this.currentTime = new Date();
-    this.params = params;
     this.dataService.getSecurity(params).subscribe(
       resp => {
+        this.params = params;
+        this.currentTime = new Date();
         this.items = resp.body;
         this.itemCount = Number(resp.headers.get('X-Total-Count'));
       }

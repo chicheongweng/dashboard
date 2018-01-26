@@ -31,10 +31,10 @@ export class SecuritiesComponent implements OnInit {
     console.log('securities params = ', params);
     this.currentTime = new Date();
     this.params = params;
-    this.dataService.getSecurity(params).then(
-      result => {
-        this.items = result.items;
-        this.itemCount = result.itemCount;
+    this.dataService.getSecurity(params).subscribe(
+      resp => {
+        this.items = resp.body;
+        this.itemCount = Number(resp.headers.get('X-Total-Count'));
       }
     );
   }

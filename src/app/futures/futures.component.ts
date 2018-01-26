@@ -28,10 +28,10 @@ export class FuturesComponent implements OnInit {
   reloadItems(params) {
     this.currentTime = new Date();
     this.params = params;
-    this.dataService.getFuture(params).then(
-      result => {
-        this.items = result.items;
-        this.itemCount = result.itemCount;
+    this.dataService.getFuture(params).subscribe(
+      resp => {
+        this.items = resp.body;
+        this.itemCount = Number(resp.headers.get('X-Total-Count'));
       }
     );
   }

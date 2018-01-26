@@ -12,6 +12,7 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../environments/environment';
 import { DataTableParams } from 'angular-4-data-table/src/index';
 // reference https://alligator.io/angular/httpclient-intro/
+// reference https://yakovfain.com/2018/01/03/wrapping-an-rxjs-observable-stream-into-an-angular-service/?utm_campaign=NG-Newsletter&utm_medium=email&utm_source=NG-Newsletter_235
 
 function paramsToQueryString(params: DataTableParams) {
   const result = [];
@@ -45,24 +46,12 @@ export class DataService {
 
   public getSecurity(params?: DataTableParams) {
     const url = params ? this.apiUrl + '/securities?' + paramsToQueryString(params) : this.apiUrl + '/securities';
-    return this.httpClient.get<Security[]>(url, { observe: 'response' }).toPromise()
-      .then(resp => {
-        return ({
-          items: resp.body,
-          itemCount: Number(resp.headers.get('X-Total-Count'))
-        });
-      });
+    return this.httpClient.get<Security[]>(url, { observe: 'response' });
   }
 
   public getFuture(params: DataTableParams) {
     const url = params ? this.apiUrl + '/futures?' + paramsToQueryString(params) : this.apiUrl + '/futures';
-    return this.httpClient.get<Future[]>(url, { observe: 'response' }).toPromise()
-      .then(resp => {
-        return ({
-          items: resp.body,
-          itemCount: Number(resp.headers.get('X-Total-Count'))
-        });
-      });
+    return this.httpClient.get<Future[]>(url, { observe: 'response' });
   }
 
   public getLoan(): Observable<Loan[]> {

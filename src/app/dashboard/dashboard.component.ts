@@ -40,14 +40,14 @@ export class DashboardComponent implements OnInit {
   }
 
   loadSecurities() {
-    this.dataService.getSecurity(this.params).then(securities => {
-      this.securities = new Securities(securities.items);
+    this.dataService.getSecurity(this.params).subscribe(resp => {
+      this.securities = new Securities(resp.body);
     });
   }
 
   loadFutures() {
-    this.dataService.getFuture(this.params).then(futures => {
-      this.futures = new Futures(futures.items);
+    this.dataService.getFuture(this.params).subscribe(resp => {
+      this.futures = new Futures(resp.body);
     });
   }
 

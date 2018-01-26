@@ -44,14 +44,16 @@ export class DataService {
     this.apiUrl = environment.apiUrl;
   }
 
-  public getSecurity(params?: DataTableParams) {
-    const url = params ? this.apiUrl + '/securities?' + paramsToQueryString(params) : this.apiUrl + '/securities';
-    return this.httpClient.get<Security[]>(url, { observe: 'response' });
+  private constructUrl(params, product: string) {
+    return params ? this.apiUrl + '/' + product + '?' + paramsToQueryString(params) : this.apiUrl + '/' + product;
+  }
+
+  public getSecurity(params: DataTableParams) {
+    return this.httpClient.get<Security[]>(this.constructUrl(params, 'securities'), { observe: 'response' });
   }
 
   public getFuture(params: DataTableParams) {
-    const url = params ? this.apiUrl + '/futures?' + paramsToQueryString(params) : this.apiUrl + '/futures';
-    return this.httpClient.get<Future[]>(url, { observe: 'response' });
+    return this.httpClient.get<Future[]>(this.constructUrl(params, 'futures'), { observe: 'response' });
   }
 
   public getLoan(): Observable<Loan[]> {

@@ -48,11 +48,11 @@ export class DataService {
     return params ? this.apiUrl + '/' + product + '?' + paramsToQueryString(params) : this.apiUrl + '/' + product;
   }
 
-  public getSecurity(params: DataTableParams) {
+  public getSecurity(params: DataTableParams): Observable<any> {
     return this.httpClient.get<Security[]>(this.constructUrl(params, 'securities'), { observe: 'response' });
   }
 
-  public getFuture(params: DataTableParams) {
+  public getFuture(params: DataTableParams): Observable<any> {
     return this.httpClient.get<Future[]>(this.constructUrl(params, 'futures'), { observe: 'response' });
   }
 

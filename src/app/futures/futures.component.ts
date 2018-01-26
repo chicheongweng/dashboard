@@ -14,10 +14,10 @@ export class FuturesComponent implements OnInit {
   params;
 
   ngOnInit() {
+    this.reloadItems(this.params);
     setInterval(() => {
-      this.currentTime = new Date();
       this.reloadItems(this.params);
-    }, 2000);
+    }, environment.poll_freq);
   }
 
   constructor(private dataService: DataService) {

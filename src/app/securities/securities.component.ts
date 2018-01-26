@@ -16,9 +16,10 @@ export class SecuritiesComponent implements OnInit {
   params;
 
   ngOnInit() {
+    this.reloadItems(this.params);
     setInterval(() => {
       this.reloadItems(this.params);
-    }, 2000);
+    }, environment.poll_freq);
   }
 
   constructor(private dataService: DataService) {

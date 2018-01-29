@@ -7,6 +7,7 @@ import { LoansComponent } from './loans/loans.component';
 import { CashComponent } from './cash/cash.component';
 import { BankFacilitiesComponent } from './bank-facilities/bank-facilities.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AmountComponent } from './amount/amount.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DataService } from './data.service';
 import { DataTableModule } from 'angular-4-data-table/src/index';
@@ -16,6 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
+    AmountComponent,
     SecuritiesComponent,
     FuturesComponent,
     LoansComponent,

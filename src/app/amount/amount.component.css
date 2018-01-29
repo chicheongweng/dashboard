@@ -1,19 +1,1 @@
-span {
-  background-color: white;
-  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-  animation-name: example;
-  animation-duration: 1s;
-}
 
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
-  from {background-color: white;}
-  to {background-color: yellow;}
-}
-
-/* Standard syntax */
-@keyframes example {
-  from {background-color: white;}
-  to {background-color: yellow;}
-}

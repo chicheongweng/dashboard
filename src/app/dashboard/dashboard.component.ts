@@ -22,6 +22,11 @@ export class DashboardComponent implements OnInit {
   private params;
   envName: string;
 
+  securitiesDaily: number;
+  securitiesAccumulated: number;
+  futuresDaily: number;
+  futuresAccumulated: number;
+
   constructor(private dataService: DataService) {
     this.params = environment.params;
     this.envName = environment.name;
@@ -42,12 +47,16 @@ export class DashboardComponent implements OnInit {
   loadSecurities() {
     this.dataService.getSecurity(this.params).subscribe(resp => {
       this.securities = new Securities(resp.body);
+      this.securitiesDaily = this.securities.getDaily();
+      this.securitiesAccumulated = this.securities.getDaily();
     });
   }
 
   loadFutures() {
     this.dataService.getFuture(this.params).subscribe(resp => {
       this.futures = new Futures(resp.body);
+      this.futuresDaily = this.futures.getDaily();
+      this.futuresAccumulated = this.futures.getAccumulated();
     });
   }
 

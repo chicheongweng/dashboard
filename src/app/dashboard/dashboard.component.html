@@ -13,14 +13,14 @@
       <tr *ngIf="securities">
         <td><a routerLink="/securities">Securities</a></td>
         <td></td>
-        <td>{{securitiesDaily | currency:'HKD' | slice:3}}</td>
-        <td>{{securitiesAccumulated | currency:'HKD' | slice:3}}</td>
+        <td><app-amount [amount]='securitiesDaily'></app-amount></td>
+        <td><app-amount [amount]='securitiesAccumulated'></app-amount></td>
       </tr>
       <tr *ngIf="futures">
         <td><a routerLink="/futures">Futures</a></td>
         <td></td>
-        <td>{{futuresDaily | currency:'HKD' | slice:3}}</td>
-        <td>{{futuresAccumulated | currency:'HKD' | slice:3}}</td>
+        <td><app-amount [amount]='futuresDaily'></app-amount></td>
+        <td><app-amount [amount]='futuresAccumulated'></app-amount></td>
       </tr>
     </tbody>
   </table>

@@ -15,8 +15,9 @@ class Item:
 
   def inc(self):
     delta = random.randint(1000,9999)
-    self.daily_turnover += delta
-    self.accumulated_turnover += delta
+    if random.random()>0.5:
+      self.daily_turnover += delta
+      self.accumulated_turnover += delta
 
   def toString(self):
     return json.dumps(self, default=lambda o: o.__dict__,

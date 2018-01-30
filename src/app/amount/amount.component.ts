@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChange } from '@angular/core';
 
 // reference
 // 1. https://www.themarketingtechnologist.co/building-nested-components-in-angular-2/
@@ -12,6 +12,7 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 export class AmountComponent implements OnChanges {
   @Input() amount: number;
   style;
+  changeLog: string[] = [];
 
   constructor() { }
 
@@ -40,8 +41,27 @@ export class AmountComponent implements OnChanges {
                                       }
                                     }, 1000);
   }
-
+  /*
   ngOnChanges() {
+    console.log('ngOnChanges');
     this.flash();
+  }
+  */
+  ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+    const log: string[] = [];
+    // tslint:disable-next-line:forin
+    for (let propName in changes) {
+      let changedProp = changes[propName];
+      let to = JSON.stringify(changedProp.currentValue);
+      if (changedProp.isFirstChange()) {
+        log.push(`Initial value of ${propName} set to ${to}`);
+      } else {
+        let from = JSON.stringify(changedProp.previousValue);
+        log.push(`${propName} changed from ${from} to ${to}`);
+        this.flash();
+      }
+    }
+    this.changeLog.push(log.join(', '));
+    // console.log(log);
   }
 }

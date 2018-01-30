@@ -4,7 +4,7 @@ import time
 
 NUM_OF_SECURITIES = 30
 NUM_OF_FUTURES = 20
-FREQ = 10
+FREQ = 5 # seconds
 OUTFILE = "db.json"
 
 class Item:

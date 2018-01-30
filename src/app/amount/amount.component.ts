@@ -11,22 +11,37 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 })
 export class AmountComponent implements OnChanges {
   @Input() amount: number;
-  cssClass;
+  style;
 
   constructor() { }
 
-  getCSSClass() {
-    this.cssClass = {
-      'background-color': 'white',
-      '-webkit-animation-name': 'example', /* Safari 4.0 - 8.0 */
-      '-webkit-animation-duration': '1s', /* Safari 4.0 - 8.0 */
-      'animation-name': 'example',
-      'animation-duration': '1s'
+  private setBackGround(color: string) {
+    this.style = {
+      'background-color': color
     };
   }
 
+  private setYellow() {
+    this.setBackGround('yellow');
+  }
+
+  private setWhite() {
+    this.setBackGround('white');
+  }
+
+  flash() {
+    let count = 0;
+    this.setYellow();
+    count++;
+    const myVar = setInterval(() => { this.setWhite();
+                                      if (count > 0) {
+                                        count = 0;
+                                        clearInterval(myVar);
+                                      }
+                                    }, 1000);
+  }
+
   ngOnChanges() {
-    console.log('changes detected');
-    this.getCSSClass();
+    this.flash();
   }
 }

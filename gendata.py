@@ -14,8 +14,8 @@ class Item:
     self.accumulated_turnover = accumulated
 
   def inc(self):
-    delta = random.randint(1000,9999)
-    if random.random()>0.5:
+    delta = random.randint(100,999)
+    if random.random()>0.7:
       self.daily_turnover += delta
       self.accumulated_turnover += delta
 
@@ -31,8 +31,8 @@ class Items:
     self.items = []
     for _ in xrange(total):
       account_executive = random.randint(10000,99999)
-      daily = random.randint(100000,200000)
-      accumulated = daily + random.randint(100000,200000)
+      daily = random.randint(1000,2000)
+      accumulated = daily + random.randint(1000,2000)
       self.items.append(Item(account_executive, daily, accumulated))
 
   def inc(self):

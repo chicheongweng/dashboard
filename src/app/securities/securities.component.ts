@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Security } from './security';
 import { environment } from '../../environments/environment';
+import { AuthService } from '../auth/auth.service';
+
 @Component({
   selector: 'app-securities',
   templateUrl: './securities.component.html',
@@ -15,7 +17,7 @@ export class SecuritiesComponent implements OnInit {
   apiUrl;
   params;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, public auth: AuthService) {
     this.apiUrl = environment.apiUrl;
     this.params = environment.params;
   }

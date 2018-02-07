@@ -3,14 +3,14 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 export const environment = {
-  production: false,
-  name: 'DEV',
-  apiUrl: 'http://localhost:3000',
+  production: true,
+  name: 'UAT',
+  apiUrl: 'http://uat.ecgdashboard.emperorgroup.net:3000',
   params: { 'offset': 0, 'limit': 10, 'sortBy': 'account_executive', 'sortAsc': 'ASC' },
   poll_freq: 5000,
   auth_config: {
     clientID: 'c7O0OxyS1vBSEhFu9pNTsN0YWFh0d9ly',
     domain: 'emperorgroup.eu.auth0.com',
-    callbackURL: 'http://localhost:4200/dashboard'
+    callbackURL: 'http://uat.ecgdashboard.emperorgroup.net/dashboard'
   }
 };

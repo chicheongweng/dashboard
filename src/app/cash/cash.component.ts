@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Cash } from './cash';
+import { AuthService } from '../auth/auth.service';
+
 @Component({
   selector: 'app-cash',
   templateUrl: './cash.component.html',
@@ -9,7 +11,7 @@ import { Cash } from './cash';
 export class CashComponent implements OnInit {
   title = 'Cash';
   cash: Cash[];
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, public auth: AuthService) { }
 
   ngOnInit() {
     this.dataService.getCash()

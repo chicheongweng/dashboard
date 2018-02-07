@@ -6,6 +6,8 @@ import { Loan } from '../loans/loan';
 import { Securities } from '../securities/security';
 import { BankFacility } from '../bank-facilities/bank-facility';
 import { environment } from '../../environments/environment';
+import { AuthService } from '../auth/auth.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -27,7 +29,7 @@ export class DashboardComponent implements OnInit {
   futuresDaily: number;
   futuresAccumulated: number;
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService, public auth: AuthService) {
     this.params = environment.params;
     this.envName = environment.name;
   }

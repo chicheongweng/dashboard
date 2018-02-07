@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { Loan } from './loan';
+import { AuthService } from '../auth/auth.service';
+
 @Component({
   selector: 'app-loans',
   templateUrl: './loans.component.html',
@@ -10,7 +12,7 @@ export class LoansComponent implements OnInit {
   loans: Loan[];
   currentTime;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService, public auth: AuthService) { }
 
   ngOnInit() {
     this.loadComponent();

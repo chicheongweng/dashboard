@@ -1,4 +1,8 @@
-<div class="container">
+<div class="container" *ngIf="!auth.isAuthenticated()">
+  <h1><p style="text-align:center">Wecome to ECG Dashboard, please login.</p></h1>
+</div>
+
+<div class="container" *ngIf="auth.isAuthenticated()">
   <p style="text-align:center" ><b>Main Menu ({{envName}})</b> {{currentTime}}</p>
   <table class="table table-striped">
     <thead>
@@ -26,7 +30,7 @@
   </table>
 </div>
 
-<div class="container">
+<div class="container" *ngIf="auth.isAuthenticated()">
     <table class="table table-striped">
       <thead>
         <tr>

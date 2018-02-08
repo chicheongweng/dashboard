@@ -1,23 +1,27 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
-    <div class="navbar-header">
       <a class="navbar-brand" routerLink="/">{{title}}</a>
-      <button type="button" class="btn btn-primary"
-        id="qsLoginBtn"
-        class="btn btn-primary btn-margin"
-        *ngIf="!auth.isAuthenticated()"
-        (click)="auth.login()">
-          Log In
-      </button>
-      <button type="button" class="btn btn-primary"
-        id="qsLogoutBtn"
-        class="btn btn-primary btn-margin"
-        *ngIf="auth.isAuthenticated()"
-        (click)="auth.logout()">
-          Log Out
-      </button>
-    </div>
-    <!--
+      <div class="pull-right">
+          <a routerLink="/profile" style="color:white" *ngIf="auth.isAuthenticated()">Welcome, User</a>
+        <div class="nav pull-right">
+          <button type="button" class="btn btn-primary"
+          id="qsLoginBtn"
+          class="btn btn-primary btn-margin"
+          *ngIf="!auth.isAuthenticated()"
+          (click)="auth.login()">
+            Log In
+        </button>
+        <button type="button" class="btn btn-primary"
+          id="qsLogoutBtn"
+          class="btn btn-primary btn-margin"
+          *ngIf="auth.isAuthenticated()"
+          (click)="auth.logout()">
+            Log Out
+        </button>
+        </div>
+      </div>
+
+      <!--
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><a routerLink="/">Main Menu</a></li>

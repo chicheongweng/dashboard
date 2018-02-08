@@ -6,6 +6,7 @@ import { FuturesComponent } from './futures/futures.component';
 import { LoansComponent } from './loans/loans.component';
 import { CashComponent } from './cash/cash.component';
 import { BankFacilitiesComponent } from './bank-facilities/bank-facilities.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'futures', component: FuturesComponent },
   { path: 'loans', component: LoansComponent },
   { path: 'cash', component: CashComponent },
+  { path: 'profile', component: ProfileComponent },
   { path: 'bank-facilities', component: BankFacilitiesComponent }
 ];
 @NgModule({

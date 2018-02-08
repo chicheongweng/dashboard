@@ -12,14 +12,34 @@ export class AuthService {
     responseType: 'token id_token',
     audience: `https://${environment.auth_config.domain}/userinfo`,
     redirectUri: environment.auth_config.callbackURL,
-    scope: 'openid'
+    scope: 'openid profile'
+
   });
+
+  userProfile: any;
 
   constructor(public router: Router) {}
 
   public login(): void {
     this.auth0.authorize();
   }
+
+  // reference: https://auth0.com/docs/quickstart/spa/angular2/02-user-profile
+  public getProfile(cb): void {
+    const accessToken = localStorage.getItem('access_token');
+    if (!accessToken) {
+      throw new Error('Access token must exist to fetch profile');
+    }
+
+    const self = this;
+    this.auth0.client.userInfo(accessToken, (err, profile) => {
+      if (profile) {
+        self.userProfile = profile;
+      }
+      cb(err, profile);
+    });
+  }
+
 
   public handleAuthentication(): void {
     this.auth0.parseHash((err, authResult) => {

@@ -1,8 +1,8 @@
 <div class="panel panel-default profile-area">
-  <div class="panel-heading">
+  <div class="panel-heading" *ngIf="auth.isAuthenticated()">
     <h3>Profile</h3>
   </div>
-  <div class="panel-body">
+  <div class="panel-body" *ngIf="auth.isAuthenticated()">
     <img src="{{profile?.picture}}" class="avatar" alt="avatar">
     <div>
       <label><i class="glyphicon glyphicon-user"></i> Nickname</label>

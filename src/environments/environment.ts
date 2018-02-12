@@ -8,6 +8,7 @@ export const environment = {
   apiUrl: 'http://localhost:3000',
   params: { 'offset': 0, 'limit': 10, 'sortBy': 'account_executive', 'sortAsc': 'ASC' },
   poll_freq: 5000,
+  auth_enabled: false,
   auth_config: {
     clientID: 'c7O0OxyS1vBSEhFu9pNTsN0YWFh0d9ly',
     domain: 'emperorgroup.eu.auth0.com',

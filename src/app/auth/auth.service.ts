@@ -16,9 +16,16 @@ export class AuthService {
 
   });
 
+  auth_enabled: boolean;
   userProfile: any;
 
-  constructor(public router: Router) {}
+  constructor(public router: Router) {
+    this.auth_enabled = environment.auth_enabled;
+  }
+
+  public isAuthEnabled(): boolean {
+    return this.auth_enabled;
+  }
 
   public login(): void {
     this.auth0.authorize();
@@ -83,6 +90,9 @@ export class AuthService {
   }
 
   public isAuthenticated(): boolean {
+    if (! this.isAuthEnabled()) {
+      return true;
+    }
     // Check whether the current time is past the
     // access token's expiry time
     const expiresAt = JSON.parse(localStorage.getItem('expires_at'));

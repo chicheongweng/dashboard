@@ -11,7 +11,9 @@ export class AppComponent implements OnInit {
   title = 'ECG Dashboard (' + environment.name + ')';
 
   constructor(public auth: AuthService) {
-    auth.handleAuthentication();
+    if (auth.isAuthEnabled()) {
+      auth.handleAuthentication();
+    }
   }
 
   ngOnInit() {

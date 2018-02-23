@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {AdalService} from 'ng2-adal/dist/core';
 
 @Component({
   selector: 'app-welcome',

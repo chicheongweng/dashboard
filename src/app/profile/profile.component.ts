@@ -12,6 +12,7 @@ export class ProfileComponent implements OnInit {
   constructor(public auth: AuthService) { }
 
   ngOnInit() {
+    /*
     if (this.auth.userProfile) {
       this.profile = this.auth.userProfile;
       console.log('profile 1', this.profile);
@@ -21,6 +22,6 @@ export class ProfileComponent implements OnInit {
         console.log('profile 2', this.profile);
       });
     }
+    */
   }
-
 }

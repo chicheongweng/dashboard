@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth/auth.service';
 import { ProfileComponent } from './profile/profile.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import {AdalService} from 'ng2-adal/dist/core';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     HttpModule,
     HttpClientModule
   ],
-  providers: [DataService, AuthService],
+  providers: [AdalService, DataService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

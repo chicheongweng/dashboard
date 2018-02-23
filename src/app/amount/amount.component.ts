@@ -50,13 +50,13 @@ export class AmountComponent implements OnChanges {
   ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
     const log: string[] = [];
     // tslint:disable-next-line:forin
-    for (let propName in changes) {
-      let changedProp = changes[propName];
-      let to = JSON.stringify(changedProp.currentValue);
+    for (const propName in changes) {
+      const changedProp = changes[propName];
+      const to = JSON.stringify(changedProp.currentValue);
       if (changedProp.isFirstChange()) {
         log.push(`Initial value of ${propName} set to ${to}`);
       } else {
-        let from = JSON.stringify(changedProp.previousValue);
+        const from = JSON.stringify(changedProp.previousValue);
         log.push(`${propName} changed from ${from} to ${to}`);
         this.flash();
       }

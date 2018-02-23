@@ -10,6 +10,8 @@ export const environment = {
   poll_freq: 5000,
   auth_enabled: false,
   auth_config: {
+    tenant: 'emperorgrouphk.onmicrosoft.com',
+    clientId: 'd3258ad5-035e-4e01-9bf9-30fca0ac4de7',
     clientID: 'c7O0OxyS1vBSEhFu9pNTsN0YWFh0d9ly',
     domain: 'emperorgroup.eu.auth0.com',
     callbackURL: 'http://localhost:4200/dashboard'

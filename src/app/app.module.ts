@@ -15,6 +15,7 @@ import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth/auth.service';
 import { ProfileComponent } from './profile/profile.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProfileComponent } from './profile/profile.component';
     CashComponent,
     BankFacilitiesComponent,
     DashboardComponent,
-    ProfileComponent
+    ProfileComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

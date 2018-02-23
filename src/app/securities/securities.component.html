@@ -2,7 +2,7 @@
   <h1><p style="text-align:center">Wecome to ECG Dashboard, please login.</p></h1>
 </div>
 
-<div class="container" style="margin: auto; max-width: 1000px; margin-bottom: 50px;" *ngIf="auth.isAuthenticated()">
+<div class="container" style="margin: auto; max-width: 1000px; margin-bottom: 50px;">
     <p style="text-align:center" ><b>Securities</b> {{currentTime}}</p>
     <data-table id="persons-grid"
         [items]="items"

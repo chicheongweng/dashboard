@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
 import { environment } from '../../environments/environment';
-import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-futures',
@@ -15,7 +14,7 @@ export class FuturesComponent implements OnInit {
   apiUrl;
   params;
 
-  constructor(private dataService: DataService, public auth: AuthService) {
+  constructor(private dataService: DataService) {
     this.apiUrl = environment.apiUrl;
     this.params = environment.params;
   }

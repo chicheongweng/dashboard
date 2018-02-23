@@ -8,7 +8,7 @@ import { CashComponent } from './cash/cash.component';
 import { BankFacilitiesComponent } from './bank-facilities/bank-facilities.component';
 import { ProfileComponent } from './profile/profile.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import {LoggedInGuard} from './authentication/logged-in.guard';
+import { LoggedInGuard } from './authentication/logged-in.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },

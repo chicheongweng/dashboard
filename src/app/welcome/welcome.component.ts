@@ -8,15 +8,8 @@ import {AdalService} from 'ng2-adal/dist/core';
 })
 export class WelcomeComponent implements OnInit {
 
-  constructor(
-    private router: Router,
-    private adalService: AdalService
-  ) {
+  constructor() {
     console.log('Entering welcome');
-
-    if (this.adalService.userInfo.isAuthenticated) {
-      this.router.navigate(['/dashboard']);
-    }
   }
 
   public ngOnInit() {

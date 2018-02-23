@@ -4,7 +4,7 @@ import {AdalService} from 'ng2-adal/dist/core';
 
 @Component({
   selector: 'app-welcome',
-  template: '<h1>Welcome!</h1><button (click)="logIn()">Login</button>'
+  template: '<h1>Welcome to ECG Dashboard, please login!</h1>'
 })
 export class WelcomeComponent implements OnInit {
 
@@ -21,9 +21,5 @@ export class WelcomeComponent implements OnInit {
 
   public ngOnInit() {
     console.log('ngOnInit is called');
-  }
-
-  public logIn() {
-    this.adalService.login();
   }
 }

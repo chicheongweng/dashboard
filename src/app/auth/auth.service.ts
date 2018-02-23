@@ -12,4 +12,5 @@ export class AuthService {
             token => token.toString()
         );
     }
+
 }

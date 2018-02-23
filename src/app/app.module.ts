@@ -17,6 +17,8 @@ import { AuthService } from './auth/auth.service';
 import { ProfileComponent } from './profile/profile.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import {AdalService} from 'ng2-adal/dist/core';
+import {SecretService} from './auth/secret.service';
+import {LoggedInGuard} from './authentication/logged-in.guard';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,7 @@ import {AdalService} from 'ng2-adal/dist/core';
     HttpModule,
     HttpClientModule
   ],
-  providers: [AdalService, DataService, AuthService],
+  providers: [AdalService, SecretService, DataService, AuthService, LoggedInGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

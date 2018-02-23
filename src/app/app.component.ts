@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from './auth/auth.service';
+import {AdalService} from 'ng2-adal/dist/services/adal.service';
+import {SecretService} from './auth/secret.service';
 import { environment } from '../environments/environment';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,11 +12,28 @@ import { environment } from '../environments/environment';
 export class AppComponent implements OnInit {
   title = 'ECG Dashboard (' + environment.name + ')';
 
-  constructor(public auth: AuthService) {
-
+  ngOnInit(): void {
+    this.adalService.handleWindowCallback();
+    this.adalService.getUser();
   }
 
-  ngOnInit() {
+  constructor(
+    private adalService: AdalService,
+    private secretService: SecretService,
+    private router: Router
+  ) {
+    this.adalService.init(this.secretService.adalConfig);
+  }
 
+  isAuthenticated(): boolean {
+    return this.adalService.userInfo.isAuthenticated;
+  }
+
+  login() {
+    this.adalService.login();
+  }
+
+  logout() {
+    this.adalService.logOut();
   }
 }

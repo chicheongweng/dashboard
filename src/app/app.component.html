@@ -1,17 +1,17 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" routerLink="/">{{title}}</a>
-      <div class="nav pull-right">
-        <span style="color:red" *ngIf="isAuthenticated()">{{getUserName()}}</span>
-        <button type="button" class="btn btn-primary" id="qsLoginBtn" class="btn btn-primary btn-margin" *ngIf="!isAuthenticated()"
-          (click)="login()">
-          Log In
-        </button>
-        <button type="button" class="btn btn-primary" id="qsLogoutBtn" class="btn btn-primary btn-margin" *ngIf="isAuthenticated()"
-          (click)="logout()">
-          Log Out
-        </button>
-      </div>
+    <div class="nav pull-right">
+      <span style="color:red" *ngIf="isAuthEnabled() && isAuthenticated()">{{getUserName()}}</span>
+      <button type="button" class="btn btn-primary" id="qsLoginBtn" class="btn btn-primary btn-margin" *ngIf="isAuthEnabled() && !isAuthenticated()"
+        (click)="login()">
+        Log In
+      </button>
+      <button type="button" class="btn btn-primary" id="qsLogoutBtn" class="btn btn-primary btn-margin" *ngIf="isAuthEnabled() && isAuthenticated()"
+        (click)="logout()">
+        Log Out
+      </button>
+    </div>
 
     <!--
     <div id="navbar" class="navbar-collapse collapse">

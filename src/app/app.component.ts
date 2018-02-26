@@ -32,6 +32,10 @@ export class AppComponent implements OnInit {
     }
   }
 
+  isAuthEnabled(): boolean {
+    return environment.auth_enabled;
+  }
+
   isAuthenticated(): boolean {
     return this.adalService.userInfo.isAuthenticated;
   }

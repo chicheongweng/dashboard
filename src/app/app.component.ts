@@ -23,6 +23,15 @@ export class AppComponent implements OnInit {
     this.adalService.init(this.secretService.adalConfig);
   }
 
+  getUserName(): string {
+    const userInfo = this.adalService.userInfo;
+    if (this.adalService.userInfo.isAuthenticated) {
+      return this.adalService.userInfo.userName;
+    } else {
+      return null;
+    }
+  }
+
   isAuthenticated(): boolean {
     return this.adalService.userInfo.isAuthenticated;
   }

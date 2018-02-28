@@ -12,8 +12,6 @@ export const environment = {
   auth_config: {
     tenant: 'emperorgrouphk.onmicrosoft.com',
     clientId: '4799a27d-330c-45d6-bf08-0b4ea58341c6',
-    clientID: 'c7O0OxyS1vBSEhFu9pNTsN0YWFh0d9ly',
-    domain: 'emperorgroup.eu.auth0.com',
     callbackURL: 'http://uat.ecgdashboard.emperorgroup.net/dashboard'
   }
 };

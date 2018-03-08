@@ -7,8 +7,8 @@ export const environment = {
   name: 'DEV',
   apiUrl: 'http://localhost:3000',
   params: { 'offset': 0, 'limit': 10, 'sortBy': 'account_executive', 'sortAsc': 'ASC' },
-  poll_freq: 5000,
-  auth_enabled: true,
+  poll_freq: 3000,
+  auth_enabled: false,
   auth_config: {
     tenant: 'emperorgrouphk.onmicrosoft.com',
     clientId: 'd3258ad5-035e-4e01-9bf9-30fca0ac4de7',

@@ -9,7 +9,7 @@ import { environment } from '../environments/environment';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  title = 'ECG Dashboard (' + environment.name + ')';
+  title = 'Real-Time Dashboard (' + environment.name + ')';
 
   ngOnInit(): void {
     this.adalService.handleWindowCallback();

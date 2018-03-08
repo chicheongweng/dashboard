@@ -7,7 +7,7 @@ export const environment = {
   name: 'UAT',
   apiUrl: 'http://uat.ecgdashboard.emperorgroup.net:3000',
   params: { 'offset': 0, 'limit': 10, 'sortBy': 'account_executive', 'sortAsc': 'ASC' },
-  poll_freq: 5000,
+  poll_freq: 3000,
   auth_enabled: false,
   auth_config: {
     tenant: 'emperorgrouphk.onmicrosoft.com',
